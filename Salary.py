@@ -15,7 +15,7 @@ if st.button("Predict Salary"):
     # salary_pred = regressor.predict([[years_experience]])
 
     # Menampilkan hasil prediksi
-    st.write("The predicted salary for {} years of experience is: {}".format(years_experience, salary_pred))
+    st.write("The predicted salary for {} years of experience is: {}".format(years_experience, salary_pred[0]))
 
 # Menampilkan scatter plot dari data
 st.subheader("Scatter Plot")
