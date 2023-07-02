@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import matplotlib.pyplot as plt
 from sklearn.linear_model import LinearRegression
 
 # Load the dataset
@@ -31,9 +32,18 @@ if st.button("Predict Salary"):
 # Menampilkan scatter plot dari data
 st.subheader("Scatter Plot")
 st.write("This plot shows the relationship between years of experience and salary.")
-st.scatter_chart(df)
+plt.scatter(X, y, color="green")
+plt.title("Years Experience VS Salary")
+plt.xlabel("Years Experience")
+plt.ylabel("Salary")
+st.pyplot()
 
 # Menampilkan plot regresi
 st.subheader("Regression Plot")
 st.write("This plot shows the regression line fitted to the data.")
-st.line_chart(df)
+plt.scatter(X, y, color="green")
+plt.plot(X, regressor.predict(X), color="red")
+plt.title("Years Experience VS Salary")
+plt.xlabel("Years Experience")
+plt.ylabel("Salary")
+st.pyplot()
