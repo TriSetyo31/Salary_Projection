@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import matplotlib.pyplot as plt
+import streamlit.pyplot as plt
 from sklearn.linear_model import LinearRegression
 
 # Load the dataset
@@ -36,7 +36,7 @@ plt.scatter(X, y, color="green")
 plt.title("Years Experience VS Salary")
 plt.xlabel("Years Experience")
 plt.ylabel("Salary")
-st.pyplot(plt)
+st.pyplot()
 
 # Menampilkan plot regresi
 st.subheader("Regression Plot")
@@ -46,4 +46,4 @@ plt.plot(X, regressor.predict(X), color="red")
 plt.title("Years Experience VS Salary")
 plt.xlabel("Years Experience")
 plt.ylabel("Salary")
-st.pyplot(plt)
+st.pyplot()
